@@ -10,14 +10,12 @@ router = Router()
 async def start(message: Message):
     table_id = "unknown"
 
-    # Извлекаем стол из параметра start
-    if "start=" in message.text:
-        table_id = message.text.split("start=")[-1]
+    # Все способы получения параметра
+    args = message.text.split(maxsplit=1)
+    if len(args) > 1:
+        table_id = args[1].replace("start=", "")
 
-    # Сохраняем временное состояние
-    user_state[message.from_user.id] = {
-        "table": table_id
-    }
+    user_state[message.from_user.id] = {"table": table_id}
 
     await message.answer(
         f"Здравствуйте! 👋\n"
