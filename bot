@@ -1,0 +1,13 @@
+loft_cafe_bot/
+│── bot.py
+│── config.py
+│── requirements.txt
+│── Dockerfile (если захотите)
+│── handlers/
+│      ├── start.py
+│      ├── categories.py
+│      ├── review.py
+│── keyboards/
+│      ├── main_menu.py
+│── utils/
+       ├── storage.py
