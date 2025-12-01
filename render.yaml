@@ -2,7 +2,6 @@ services:
   - type: web
     name: loft-cafe-bot
     env: python
-    pythonVersion: 3.12.3
     plan: free
     region: frankfurt
     buildCommand: "pip install -r requirements.txt"
