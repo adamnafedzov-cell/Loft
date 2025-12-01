@@ -7,6 +7,7 @@ services:
     region: frankfurt
     buildCommand: "pip install -r requirements.txt"
     startCommand: "python bot.py"
+    pythonVersion: "3.12.3"
     envVars:
       - key: BOT_TOKEN
         sync: false
@@ -19,3 +20,4 @@ services:
       - key: DB_PATH
         value: "data/reviews.db"
     autoDeploy: true
+
